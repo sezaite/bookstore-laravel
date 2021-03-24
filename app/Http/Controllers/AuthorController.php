@@ -89,6 +89,10 @@ class AuthorController extends Controller
      */
     public function destroy(Author $author)
     {
+        if($author->authorBooks->count()){
+            return 'Trinti negalima, nes turi knygų';
+        }
+ 
         $author->delete();
         return redirect()->route('author.index');
     }
