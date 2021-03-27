@@ -1,6 +1,34 @@
-<form action="{{route('author.update', [$author->id])}}" method="post">
-    Name: <input type="text" name="author_name" value="{{$author->name}}"></input>
-    Surname: <input type="text" name="author_surname" value="{{$author->surname}}"></input>
-    @csrf
-    <button type="submit">Edit</button>
-    </form>
+@section('content')
+<div class="container">
+   <div class="row justify-content-center">
+       <div class="col-md-8">
+           <div class="card">
+               <div class="card-header">Edit</div>
+               <div class="card-body">
+                <form action="{{route('author.update', [$author->id])}}" method="post">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" value="{{$author->name}}>
+                        <small class="form-text text-muted">Author's name</small>
+                      </div>
+                      <div class="form-group">
+                        <label>Surname</label>
+                        <input type="text" class="form-control" value="{{$author->surname}}>
+                        <small class="form-text text-muted">Author's surname</small>
+                      </div>
+                    @csrf
+                    <button type="submit">Edit</button>
+                    </form>
+                
+                    @extends('layouts.app')
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        $('#summernote').summernote();
+    });
+    </script>
+@endsection
