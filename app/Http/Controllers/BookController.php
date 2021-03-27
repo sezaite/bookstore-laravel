@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use Illuminate\Http\Request;
 use App\Models\Author;
+use Validator;
 
 class BookController extends Controller
 {
@@ -40,6 +41,30 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(),
+        [
+            'book_title' => ['required'],
+            'book_isbn' => ['required'],
+            'book_pages' => ['required', 'digits_between:5,6000'],
+            'book_about' => ['required', 'min:30', 'max:500']
+        ],
+        [
+             'book_title.required' => 'Title is required',
+             'book_isbn.required' => 'ISBN is required',
+             'book_pages.required' => 'Pages are required', 
+             'book_pages.digits_between' => 'Page number is not valid',
+             'book_about.required' => 'Description is required',
+             'book_about.min' => 'Description is too short',
+             'book_about.max' => 'Description is too long'
+        ]
+        );
+        
+        if ($validator->fails()) {
+            $request->flash();
+            return redirect()->back()->withErrors($validator);
+        }
+
+
        $book = new Book;
        $book->title = $request->book_title;
        $book->isbn = $request->book_isbn;
@@ -84,7 +109,25 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        $book->title = $request->book_title;
+        $validator = Validator::make($request->all(),
+        [
+            'author_name' => ['required', 'min:3', 'max:64'],
+            'author_surname' => ['required', 'min:3', 'max:64'],
+        ],
+        [
+             'author_surname.min' => 'Surname is too short',
+             'author_surname.max' => 'Surname is too long',
+             'author_name.min' => 'Name is too short',
+             'author_name.max' => 'Name is too long'
+        ]
+        );
+        
+        if ($validator->fails()) {
+            $request->flash();
+            return redirect()->back()->withErrors($validator);
+        }
+
+       $book->title = $request->book_title;
        $book->isbn = $request->book_isbn;
        $book->pages = $request->book_pages;
        $book->about = $request->book_about;

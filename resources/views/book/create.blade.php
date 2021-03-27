@@ -10,20 +10,20 @@
                 <form method="POST" action="{{route('book.store')}}">
                     <div class="form-group">
                         <label>Title</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="book_title" value="{{old('book_title')}}">
                         <small class="form-text text-muted">Tite of the book</small>
                       </div>
                       <div class="form-group">
                         <label>ISBN</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="book_isbn" value="{{old('book_isbn')}}">
                         <small class="form-text text-muted">ISBN</small>
                       </div>
                       <div class="form-group">
                         <label>Pages</label>
-                        <input type="number" class="form-control">
+                        <input type="number" class="form-control" name="book_pages" value="{{old('book_pages')}}">
                         <small class="form-text text-muted">Number of pages</small>
                       </div>
-                    About: <textarea name="book_about" id="summernote"></textarea>
+                    About: <textarea name="book_about" id="summernote" value="{{old('book_about')}}"></textarea>
                     <select name="author_id">
                         @foreach ($authors as $author)
                             <option value="{{$author->id}}">{{$author->name}} {{$author->surname}}</option>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Author;
 use Illuminate\Http\Request;
+use Validator;
 
 class AuthorController extends Controller
 {
@@ -35,14 +36,31 @@ class AuthorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $author = new Author;
-        $author->name = $request->author_name;
-        $author->surname = $request->author_surname;
-        $author->save();
-        return redirect()->route('author.index')->with('success_message', 'Sekmingai įrašytas.');
-    }
-
+    { 
+        $validator = Validator::make($request->all(),
+        [
+            'author_name' => ['required', 'min:3', 'max:64'],
+            'author_surname' => ['required', 'min:3', 'max:64'],
+        ],
+        [
+             'author_surname.min' => 'Surname is too short',
+             'author_surname.max' => 'Surname is too long',
+             'author_name.min' => 'Name is too short',
+             'author_name.max' => 'Name is too long'
+        ]
+        );
+        
+        if ($validator->fails()) {
+            $request->flash();
+            return redirect()->back()->withErrors($validator);
+        }
+      
+    $author = new Author;
+    $author->name = $request->author_name;
+    $author->surname = $request->author_surname;
+    $author->save();
+    return redirect()->route('author.index')->with('success_message', 'Sėkmingai įrašyta.');
+}
     /**
      * Display the specified resource.
      *
@@ -74,6 +92,23 @@ class AuthorController extends Controller
      */
     public function update(Request $request, Author $author)
     {
+        $validator = Validator::make($request->all(),
+        [
+            'author_name' => ['required', 'min:3', 'max:64'],
+            'author_surname' => ['required', 'min:3', 'max:64'],
+        ],
+        [
+             'author_surname.min' => 'Surname is too short',
+             'author_surname.max' => 'Surname is too long',
+             'author_name.min' => 'Name is too short',
+             'author_name.max' => 'Name is too long'
+        ]
+        );
+        
+        if ($validator->fails()) {
+            $request->flash();
+            return redirect()->back()->withErrors($validator);
+        }
        $author->name = $request->author_name;
        $author->surname = $request->author_surname;
        $author->save();
