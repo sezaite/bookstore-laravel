@@ -13,9 +13,20 @@ class AuthorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $authors = Author::all();
+        // $authors = $request->sort ? Author::orderBy('surname')->get() : Author::all();
+        // $authors = Author::all();
+        //rusiavimas:
+        // $authors = $Author::orderBy('surname', 'desc')->get();
+        if ('name' == $request->sort){
+            $authors =Author::orderBy('name')->get();
+        } elseif ('surname' == $request->sort){
+            $authors =Author::orderBy('surname')->get();
+        } else {
+            $authors = Author::all();
+        }
+
         return view('author.index', ['authors'=>$authors]);
     }
 
