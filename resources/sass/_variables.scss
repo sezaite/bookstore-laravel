@@ -2,16 +2,17 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$title-font: 'Anton', sans-serif;
+$main-font: 'Bellefair', serif;
 $bookstore-font:'Averia Serif Libre', cursive;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
-$main-color: rgb(102, 62, 16);
-$secondary-color: rgb(38, 42, 80);
-$third-color: #DFDBC9;
-$main-text-color: #fff;
-$secondary-text-color: rgb(255, 208, 55);
-$danger-color: rgb(155, 22, 22);
-$accent-color: rgb(125, 255, 108);
+$main-color: #000000;
+$accent-color: rgb(150, 22, 22);
+$secondary-color: #C9C7C5;
+$main-light-color: rgb(255, 255, 255);
+// $secondary-text-color: rgb(255, 208, 55);
+// $danger-color: rgb(155, 22, 22);
+// $accent-color: rgb(125, 255, 108);
