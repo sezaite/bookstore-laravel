@@ -144,23 +144,24 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item:firs
   padding: 10px;
 }
 
-.card-body * {
+.card-body .form-group {
   width: 100%;
   display: inline-block;
-}
-
-.card-body .form-group {
   padding: 10px;
   border: 1px solid #C9C7C5;
 }
 
 .card-body .form-group label {
+  width: 100%;
+  display: inline-block;
   font-size: 16px;
   font-family: "Anton", sans-serif;
 }
 
 .card-body .form-group input,
 .card-body .form-group textarea {
+  width: 100%;
+  display: inline-block;
   background-color: #1f1f1f;
   border: 1px solid #000000;
   outline: none;
@@ -170,6 +171,8 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item:firs
 }
 
 .card-body .form-group small {
+  width: 100%;
+  display: inline-block;
   font-size: 10px;
 }
 
@@ -177,6 +180,43 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item:firs
 .card-body .form-group textarea:focus {
   background-color: #383838;
   border: none;
+}
+
+.card-body .list-item {
+  border: 1px solid #C9C7C5;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.card-body .list-item p.list-item-name {
+  display: inline-block;
+  width: 100%;
+}
+
+.card-body .list-item button,
+.card-body .list-item a {
+  display: inline-block;
+  width: 80px;
+  border: 1px solid #C9C7C5;
+  padding: 5px;
+  text-align: center;
+  margin: 5px 5px 0 0;
+  background-color: #000000;
+  line-height: 1;
+}
+
+.card-body .list-item button {
+  color: #961616;
+  border: 1px solid #961616;
+}
+
+.card-body .list-item button:hover,
+.card-body .list-item a:hover {
+  background-color: #383838;
+}
+
+.card-body .list-item form {
+  display: inline-block;
 }
 
 .alert {
