@@ -7,7 +7,7 @@ body * {
   vertical-align: top;
   box-sizing: border-box;
   font-family: "Bellefair", serif;
-  color: white;
+  color: #e9e9e9;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 }
 
 a {
-  color: white;
+  color: #e9e9e9;
   line-height: 1;
   font-size: 14px;
   text-decoration: none;
@@ -28,7 +28,7 @@ li {
 nav {
   display: inline-block;
   width: 100%;
-  border: 1px solid white;
+  border: 1px solid #e9e9e9;
 }
 
 nav .nav-wrap {
@@ -75,7 +75,7 @@ nav .nav-wrap ul.navbar-right .nav-item .dropdown-menu {
 }
 
 nav .nav-wrap ul.navbar-right .nav-item:hover {
-  border-top: solid 1px white;
+  border-top: solid 1px #e9e9e9;
 }
 
 nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu {
@@ -85,7 +85,7 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu {
 nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item {
   text-align: center;
   display: block;
-  border: solid 1px white;
+  border: solid 1px #e9e9e9;
   padding: 10px 0;
   margin-top: 12px;
   transition: all 0.3s;
@@ -104,12 +104,12 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item:firs
   width: 400px;
   margin: auto;
   margin-top: 50px;
-  border: 1px solid white;
+  border: 1px solid #e9e9e9;
 }
 
 .card-header {
   font-size: 20px;
-  background-color: #141414;
+  border: 1px solid #e9e9e9;
   padding: 10px;
 }
 

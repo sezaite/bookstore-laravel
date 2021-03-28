@@ -7,7 +7,7 @@
 
     &-header {
         font-size: 20px;
-        background-color: lighten($main-color, 8%);
+        border: 1px solid $main-light-color;
         padding: 10px;
     }
 
