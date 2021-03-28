@@ -126,13 +126,13 @@
                     <div class="col-md-9">
                         @if(session()->has('success_message'))
                             <div class="alert alert-success" role="alert">
-                                {{session()->get('success_message')}}
+                                <ul><li>{{session()->get('success_message')}}</li></ul>
                             </div>
                         @endif
                        
                         @if(session()->has('info_message'))
                             <div class="alert alert-info" role="alert">
-                                {{session()->get('info_message')}}
+                                <ul><li>{{session()->get('info_message')}}</li></ul>
                             </div>
                         @endif
                     </div>

@@ -2,6 +2,7 @@ nav {
     display: inline-block;
     width: 100%;
     border: 1px solid $main-light-color;
+    margin-bottom: 20px;
 
     .nav-wrap{
         width: 100%;
@@ -37,7 +38,7 @@ nav {
                     overflow: hidden;
                     display: none;
                     position: absolute;
-                    // left: -12px;
+                    left: -1px;
                     top: 20px;
                     background-color: $main-color;
                     width: 140px;
@@ -45,6 +46,8 @@ nav {
                     padding: 12px 12px;
                     z-index: 1;
                     transition: all 0.3s;
+                    border: solid 1px $main-light-color;
+                    border-top: none;
 
                     // .nav-link{
                     //    padding: 4px 0;
@@ -53,7 +56,8 @@ nav {
                 }
             }
             .nav-item:hover {
-                border-top: solid 1px $main-light-color;
+                border: solid 1px $main-light-color;
+                border-bottom: none;
                 
             }
 
@@ -74,7 +78,7 @@ nav {
                 }
 
                 .dropdown-item:hover {
-                    background-color: lighten($main-color, 6%);
+                    background-color: lighten($main-color, 16%);
                 }
 
                 .dropdown-item:first-of-type {
