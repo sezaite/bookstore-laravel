@@ -7,9 +7,9 @@
            <div class="card">
                <div class="card-header">List of Authors</div>
                <div class="sort-btn">
-                <a href="{{route('author.index', ['sort' => 'surname'])}}">Sort by surname</a>
-                <a href="{{route('author.index', ['sort' => 'name'])}}">Sort by name</a>
-                <a href="{{route('author.index')}}">Default</a>
+                <a class="btn" href="{{route('author.index', ['sort' => 'surname'])}}">Sort by surname</a>
+                <a class="btn" href="{{route('author.index', ['sort' => 'name'])}}">Sort by name</a>
+                <a class="btn" href="{{route('author.index')}}">Default</a>
             </div>
                <div class="card-body">
                    <ul>
@@ -18,10 +18,10 @@
                     <p class="list-item-name"> 
                         {{$author->name}} {{$author->surname}} 
                     </p> 
-                    <a href="{{route('author.edit', [$author])}}" class="btn btn-outline-info">EDIT</a>
+                    <a href="{{route('author.edit', [$author])}}" class="btn">EDIT</a>
                     <form method="POST" action="{{route('author.destroy', [$author])}}">
                         @csrf
-                    <button type="submit" class="btn btn-outline-dark">DELETE</button>
+                    <button type="submit" class="btn">DELETE</button>
                    </form> </li>
                 </ul>
             @endforeach

@@ -11,20 +11,20 @@
                 <form method="POST" action="{{route('book.update',[$book])}}">
                     <div class="form-group">
                         <label>Title</label>
-                        <input type="text" class="form-control" value="{{old('book_title'), $book->title}}>
+                        <input type="text" class="form-control" value="{{old('book_title'), $book->title}}">
                         <small class="form-text text-muted">Tite of the book</small>
                       </div>
                       <div class="form-group">
                         <label>ISBN</label>
-                        <input type="text" class="form-control" value="{{old('book_isbn'), $book->isbn}}>
+                        <input type="text" class="form-control" value="{{old('book_isbn'), $book->isbn}}">
                         <small class="form-text text-muted">ISBN</small>
                       </div>
                       <div class="form-group">
                         <label>Pages</label>
-                        <input type="number" class="form-control" value="{{old('book_pages'), $book->pages}}>
+                        <input type="number" class="form-control" value="{{old('book_pages'), $book->pages}}">
                         <small class="form-text text-muted">Number of pages</small>
                       </div>
-                    About: <textarea name="book_about" id="summernote">{{old('book_about'), $book->about}}</textarea>
+                    About: <textarea name="book_about">{{old('book_about'), $book->about}}"</textarea>
                     <select name="author_id">
                         @foreach ($authors as $author)
                             <option value="{{$author->id}}" @if($author->id == $book->author_id) selected @endif>
@@ -33,7 +33,7 @@
                         @endforeach
                 </select>
                     @csrf
-                    <button type="submit">EDIT</button>
+                    <button type="submit" class="btn">EDIT</button>
                 </form>
                </div>
            </div>

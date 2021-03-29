@@ -19,7 +19,7 @@
                         <small class="form-text text-muted">Author's surname</small>
                       </div>
                     @csrf
-                    <button type="submit">Create</button>
+                    <button type="submit" class="btn">Create</button>
                     </form>
                </div>
            </div>

@@ -16,6 +16,7 @@ nav {
                 color: $secondary-color;
                 font-family: $title-font;
                 font-size: 28px;
+                padding-top: 8px;
             }
         }
         ul.navbar-right {
@@ -26,12 +27,20 @@ nav {
             
             .nav-item {
                 position: relative;
-                min-width: 140px;
+                width: 126px;
+                margin-left: 10px;
+                margin-top: 8px;
                 text-decoration: none;
                 list-style-type:none;
                 text-align: center;
-                padding: 5px 0;
-                border-top: solid 1px transparent;
+                padding: 15px 0;
+                border-top: 1px solid transparent;
+                
+                .nav-link {
+                    font-family: $title-font;
+                    
+                }
+                
                 
 
                 .dropdown-menu {
@@ -39,20 +48,14 @@ nav {
                     display: none;
                     position: absolute;
                     left: -1px;
-                    top: 20px;
+                    top: 30px;
                     background-color: $main-color;
-                    width: 140px;
-                    // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    width: 126px;
                     padding: 12px 12px;
                     z-index: 1;
                     transition: all 0.3s;
                     border: solid 1px $main-light-color;
                     border-top: none;
-
-                    // .nav-link{
-                    //    padding: 4px 0;
-                    //    color: red;
-                    // }
                 }
             }
             .nav-item:hover {
@@ -61,18 +64,15 @@ nav {
                 
             }
 
-            // .nav-item:hover > a {
-            //     color:lighten($secondary-color, 20%);
-            // }
-
             .nav-item:hover .dropdown-menu {
                 display: block;
 
                 .dropdown-item {
                     text-align: center;
-                    display: block;
+                    width: 100px;
                     border: solid 1px $main-light-color;
                     padding: 10px 0;
+                    margin: 0;
                     margin-top: 12px;
                     transition: all 0.3s;
                 }
@@ -82,7 +82,7 @@ nav {
                 }
 
                 .dropdown-item:first-of-type {
-                    margin: 0;
+                    margin-top: 0;
                     
                 }
               }

@@ -60,10 +60,10 @@
                                     Authors
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('author.index') }}">
+                                    <a class="dropdown-item btn" href="{{ route('author.index') }}">
                                         Authors List
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('author.create') }}">
+                                    <a class="dropdown-item btn" href="{{ route('author.create') }}">
                                         New Author
                                     </a>
                                 </div>
@@ -73,10 +73,10 @@
                                     Books
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('book.index') }}">
+                                    <a class="dropdown-item btn" href="{{ route('book.index') }}">
                                         Books List
                                     </a>
-                                        <a class="dropdown-item" href="{{ route('book.create') }}">
+                                        <a class="dropdown-item btn" href="{{ route('book.create') }}">
                                         New Book
                                     </a>
                                 </div>
@@ -88,7 +88,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item btn" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}

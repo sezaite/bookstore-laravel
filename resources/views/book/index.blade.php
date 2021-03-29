@@ -7,13 +7,16 @@
            <div class="card">
                <div class="card-header">List of books</div>
                <div class="card-body">
+                <ul>
                 @foreach ($books as $book)
-                {{$book->title}} - {{$book->bookAuthor->name}} {{$book->bookAuthor->surname}}
-                  <a href="{{route('book.edit',[$book])}}">EDIT</a>
+                <li class="list-item">
+                <p class="list-item-name"> <span style="font-weight: 600">{{$book->title}}</span> - by {{$book->bookAuthor->name}} {{$book->bookAuthor->surname}} </p>
+                  <a href="{{route('book.edit',[$book])}}" class="btn">EDIT</a>
                   <form method="POST" action="{{route('book.destroy', [$book])}}">
                    @csrf
-                   <button type="submit">DELETE</button>
-                  </form>
+                   <button type="submit" class="btn">DELETE</button>
+                  </form></li>
+                </ul>
                 @endforeach
                </div>
            </div>

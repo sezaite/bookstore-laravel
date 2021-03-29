@@ -1,0 +1,45 @@
+.btn {
+    display: inline-block;
+    width: 80px;
+    border: 1px solid $main-light-color;
+    padding: 5px;
+    text-align: center;
+    margin: 5px 5px 0 0;
+    background-color: $main-color;
+    line-height: 1;
+    transition: all 0.3s;
+}
+
+button.btn {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+}
+
+.btn:hover {
+    background-color: lighten($main-color, 9%);
+}
+
+.sort-btn {
+    margin: 10px;
+    border: 1px solid $main-light-color;
+    display: flex;
+    justify-content: space-between;
+
+    .btn{
+
+    }
+
+    a {
+        margin: 20px;
+        padding: 5px;
+        border: 1px solid $main-light-color;
+        width: 110px;
+        text-align: center;
+        transition: all 0.3s;
+    }
+}
+
+nav {
+    
+}
+

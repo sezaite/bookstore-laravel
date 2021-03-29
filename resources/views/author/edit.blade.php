@@ -17,7 +17,7 @@
                         <small class="form-text text-muted">Author's surname</small>
                       </div>
                     @csrf
-                    <button type="submit">Edit</button>
+                    <button type="submit" class="btn">Edit</button>
                     </form>
                 
                     @extends('layouts.app')

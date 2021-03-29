@@ -45,14 +45,13 @@ class BookController extends Controller
         [
             'book_title' => ['required'],
             'book_isbn' => ['required'],
-            'book_pages' => ['required', 'digits_between:5,6000'],
-            'book_about' => ['required', 'min:30', 'max:500']
+            'book_pages' => ['required'],
+            'book_about' => ['required', 'min:20', 'max:500']
         ],
         [
              'book_title.required' => 'Title is required',
              'book_isbn.required' => 'ISBN is required',
              'book_pages.required' => 'Pages are required', 
-             'book_pages.digits_between' => 'Page number is not valid',
              'book_about.required' => 'Description is required',
              'book_about.min' => 'Description is too short',
              'book_about.max' => 'Description is too long'

@@ -23,15 +23,19 @@
                         <input type="number" class="form-control" name="book_pages" value="{{old('book_pages')}}">
                         <small class="form-text text-muted">Number of pages</small>
                       </div>
-                      
-                    About: <textarea name="book_about" value="{{old('book_about')}}"></textarea>
+                      <div class="form-group">
+                      <label>About:</label> <textarea name="book_about" value="{{old('book_about')}}"></textarea>
+                      </div>
+                      <div class="form-group author">
+                          <label>Author:</label>
                     <select name="author_id">
                         @foreach ($authors as $author)
                             <option value="{{$author->id}}">{{$author->name}} {{$author->surname}}</option>
                         @endforeach
                  </select>
+                </div>
                     @csrf
-                    <button type="submit">ADD</button>
+                    <button type="submit" class="btn">ADD</button>
                  </form>
                </div>
            </div>
