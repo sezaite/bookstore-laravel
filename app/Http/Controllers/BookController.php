@@ -14,10 +14,15 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $authors = Author::all();
+        if($request->author_id){
+           $books = Book::where('author_id', $request->author_id)->get();
+        } else {
         $books = Book::all();
-       return view('book.index', ['books' => $books]);
+        }
+        return view('book.index', ['books' => $books, 'authors' => $authors]);
 
     }
 

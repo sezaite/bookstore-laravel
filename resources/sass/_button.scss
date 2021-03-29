@@ -19,15 +19,11 @@ button.btn {
     background-color: lighten($main-color, 9%);
 }
 
-.sort-btn {
+.sort-btn, .filter {
     margin: 10px;
     border: 1px solid $main-light-color;
     display: flex;
     justify-content: space-between;
-
-    .btn{
-
-    }
 
     a {
         margin: 20px;
@@ -37,9 +33,5 @@ button.btn {
         text-align: center;
         transition: all 0.3s;
     }
-}
-
-nav {
-    
 }
 

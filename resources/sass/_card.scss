@@ -80,6 +80,7 @@
         //select area styling
 
         .form-group.author {
+            
             label {
                 display: inline-block;
                 width: 20%;
@@ -93,6 +94,27 @@
             }
             select:focus {
                 background-color: lighten($main-color, 22%);
+            }
+        }
+
+        .form-group.author.filter {
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                label {
+                    font-size: 13px;
+                }
+
+                select {
+                    width: 150px;
+                    height: 25px;
+                }
+
+                button, a {
+                    margin: 0;
+                }
             }
         }
         

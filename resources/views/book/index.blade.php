@@ -7,6 +7,18 @@
            <div class="card">
                <div class="card-header">List of books</div>
                <div class="card-body">
+                <div class="filter form-group author">
+                    <form action="{{route('book.index')}}" method="get">
+                 <label>Filter by author:</label>
+                 <select name="author_id">
+                     @foreach ($authors as $author)
+                         <option value="{{$author->id}}">{{$author->name}} {{$author->surname}}</option>
+                     @endforeach
+              </select>
+                 <button type="submit" class="btn">Filter</button>
+                 <a href="{{route('book.index')}}" class="btn">Clear filter</a>
+             </div>
+         </form>
                 <ul>
                 @foreach ($books as $book)
                 <li class="list-item">

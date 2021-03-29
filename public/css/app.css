@@ -90,6 +90,14 @@ nav .nav-wrap ul.navbar-right .nav-item:hover {
   border-bottom: none;
 }
 
+nav .nav-wrap ul.navbar-right .nav-item.log {
+  border: none;
+}
+
+nav .nav-wrap ul.navbar-right .nav-item.log a:hover {
+  opacity: 0.8;
+}
+
 nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu {
   display: block;
 }
@@ -210,6 +218,26 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item:firs
   background-color: #2b5c4f;
 }
 
+.card-body .form-group.author.filter form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body .form-group.author.filter form label {
+  font-size: 13px;
+}
+
+.card-body .form-group.author.filter form select {
+  width: 150px;
+  height: 25px;
+}
+
+.card-body .form-group.author.filter form button,
+.card-body .form-group.author.filter form a {
+  margin: 0;
+}
+
 .alert {
   width: 400px;
   margin: auto;
@@ -248,14 +276,16 @@ button.btn {
   background-color: #162e28;
 }
 
-.sort-btn {
+.sort-btn,
+.filter {
   margin: 10px;
   border: 1px solid #C9C7C5;
   display: flex;
   justify-content: space-between;
 }
 
-.sort-btn a {
+.sort-btn a,
+.filter a {
   margin: 20px;
   padding: 5px;
   border: 1px solid #C9C7C5;

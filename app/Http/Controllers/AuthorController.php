@@ -26,7 +26,7 @@ class AuthorController extends Controller
         } else {
             $authors = Author::all();
         }
-
+        
         return view('author.index', ['authors'=>$authors]);
     }
 

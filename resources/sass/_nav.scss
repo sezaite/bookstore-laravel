@@ -64,6 +64,12 @@ nav {
                 
             }
 
+            .nav-item.log {
+                border: none;
+                a:hover { 
+                opacity: 0.8;}
+            }
+
             .nav-item:hover .dropdown-menu {
                 display: block;
 
