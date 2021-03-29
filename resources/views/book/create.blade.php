@@ -25,6 +25,7 @@
                       </div>
                       <div class="form-group">
                       <label>About:</label> <textarea name="book_about" value="{{old('book_about')}}"></textarea>
+                      <small class="form-text text-muted">Short info</small>
                       </div>
                       <div class="form-group author">
                           <label>Author:</label>
@@ -35,7 +36,7 @@
                  </select>
                 </div>
                     @csrf
-                    <button type="submit" class="btn">ADD</button>
+                    <button type="submit" class="btn large-btn">ADD</button>
                  </form>
                </div>
            </div>

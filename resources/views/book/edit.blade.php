@@ -24,7 +24,10 @@
                         <input type="number" class="form-control" value="{{old('book_pages'), $book->pages}}">
                         <small class="form-text text-muted">Number of pages</small>
                       </div>
-                    About: <textarea name="book_about">{{old('book_about'), $book->about}}"</textarea>
+                      <div class="form-group">
+                      <label>About:</label> <textarea name="book_about">{{old('book_about'), $book->about}}</textarea> <small class="form-text text-muted">Short info</small></div>
+                      <div class="form-group author">
+                        <label>Author:</label>
                     <select name="author_id">
                         @foreach ($authors as $author)
                             <option value="{{$author->id}}" @if($author->id == $book->author_id) selected @endif>
@@ -32,8 +35,9 @@
                             </option>
                         @endforeach
                 </select>
+            </div>
                     @csrf
-                    <button type="submit" class="btn">EDIT</button>
+                    <button type="submit" class="btn large-btn">EDIT</button>
                 </form>
                </div>
            </div>

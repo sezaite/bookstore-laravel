@@ -1,34 +1,39 @@
 .card {
     background-color: $main-color;
     width: 500px;
-    margin: 20px auto;
-    border: 1px solid $main-light-color;
+    margin: auto;
+    margin-bottom: 60px;
+    border: 2px solid $main-light-color;
+    padding-bottom: 10px;
 
     
     &-header {
         font-size: 20px;
         font-family: $title-font;
-        border: 1px solid $main-light-color;
+        border: 2px solid $main-light-color;
         padding: 10px;
         margin: 10px;
+        margin-bottom: 0;
+        padding-left: 10px;
     }
 
     &-body {
-        padding: 10px;
+        padding: 0 10px;
 
         //form items
         .form-group {
             width: 100%;
             display: inline-block;
             padding: 10px;
-            border: 1px solid $main-light-color;
-            margin: 10px 0;
+            border: 2px solid $main-light-color;
+            margin-top: 10px;
             
             label {
-                width: 100%;
+                
                 display: inline-block;
                 font-size: 16px;
                 font-family: $title-font; 
+                
             }
 
             input, textarea {
@@ -61,17 +66,18 @@
 
          //index list items
          .list-item{
-            border: 1px solid $main-light-color;
-            padding: 20px;
+            border: 2px solid $main-light-color;
+            padding: 10px;
             margin: 10px 0;
 
             p.list-item-name {
                 display: inline-block;
                 width: 100%;
-                padding: 10px 0;
+                padding: 5px 0;
+                color: $accent-color;
             }
             
-            //for delete button
+            //form delete button
             form {
                 display: inline-block;
             }
@@ -99,12 +105,14 @@
 
         .form-group.author.filter {
             form {
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                
 
                 label {
-                    font-size: 13px;
+                    font-size: 12px;
                 }
 
                 select {

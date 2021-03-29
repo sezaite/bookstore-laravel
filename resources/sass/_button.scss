@@ -16,22 +16,35 @@ button.btn {
 }
 
 .btn:hover {
-    background-color: lighten($main-color, 9%);
+    background-color: lighten($main-color, 19%);
+    color: $accent-color;
 }
 
-.sort-btn, .filter {
-    margin: 10px;
-    border: 1px solid $main-light-color;
+.form-group.sort, .form-group.filter {
+    border: 2px solid $main-light-color;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 0;
 
-    a {
-        margin: 20px;
-        padding: 5px;
-        border: 1px solid $main-light-color;
-        width: 110px;
-        text-align: center;
-        transition: all 0.3s;
+    label {
+        font-family: $title-font;
+        font-size: 14px;
     }
+    a, button {
+        width: 80px;
+      
+    }
+
+    .filter {
+        margin-bottom: 0;
+    }
+}
+
+.btn.large-btn {
+    width: 50%;
+    border: 2px solid $accent-color;
+    margin: 10px 25%;
 }
 
