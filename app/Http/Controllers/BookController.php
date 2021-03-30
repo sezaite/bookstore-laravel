@@ -51,7 +51,7 @@ class BookController extends Controller
             'book_title' => ['required'],
             'book_isbn' => ['required'],
             'book_pages' => ['required'],
-            'book_about' => ['required', 'min:20', 'max:500']
+            'book_about' => ['required', 'min:20', 'max:500'],
         ],
         [
              'book_title.required' => 'Title is required',
@@ -59,7 +59,7 @@ class BookController extends Controller
              'book_pages.required' => 'Pages are required', 
              'book_about.required' => 'Description is required',
              'book_about.min' => 'Description is too short',
-             'book_about.max' => 'Description is too long'
+             'book_about.max' => 'Description is too long',
         ]
         );
         
@@ -76,7 +76,7 @@ class BookController extends Controller
        $book->about = $request->book_about;
        $book->author_id = $request->author_id;
        $book->save();
-       return redirect()->route('book.index')->with('success_message', 'Sekmingai įrašyta.');
+       return redirect()->route('book.index')->with('success_message', 'Sėkmingai įrašyta.');
 
     }
 

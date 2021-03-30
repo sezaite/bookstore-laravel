@@ -24,7 +24,7 @@
                         <small class="form-text text-muted">Number of pages</small>
                       </div>
                       <div class="form-group">
-                      <label>About:</label> <textarea name="book_about" value="{{old('book_about')}}"></textarea>
+                      <label>About:</label> <textarea name="book_about">{{old('book_about')}}</textarea>
                       <small class="form-text text-muted">Short info</small>
                       </div>
                       <div class="form-group author">

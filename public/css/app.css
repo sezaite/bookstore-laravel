@@ -144,6 +144,7 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item:firs
   margin: 10px;
   margin-bottom: 0;
   padding-left: 10px;
+  color: white;
 }
 
 .card-body {
@@ -253,6 +254,7 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item:firs
 .alert {
   width: 400px;
   margin: auto;
+  margin-bottom: 10px;
   border: 1px solid #a09f9f;
 }
 
@@ -265,6 +267,11 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item:firs
   width: 100%;
   border: 1px solid #a09f9f;
   padding: 10px;
+  margin-top: 10px;
+}
+
+.alert ul li:first-of-type {
+  margin-top: 0;
 }
 
 .btn {
