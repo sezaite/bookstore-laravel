@@ -101,7 +101,6 @@ class BookController extends Controller
     {
         $authors = Author::all();
         return view('book.edit', ['book' => $book, 'authors' => $authors]);
-
     }
 
     /**
