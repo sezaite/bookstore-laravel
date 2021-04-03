@@ -15,7 +15,7 @@
                    <ul>
                 @foreach($publishers as $publisher)
                <li class="list-item">
-                    <p class="list-item-name"> 
+                    <p class="list-item-name highlighted-name"> 
                         {{$publisher->title}}
                     </p> 
                     <a href="{{route('publisher.edit', [$publisher])}}" class="btn">EDIT</a>

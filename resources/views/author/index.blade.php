@@ -16,7 +16,7 @@
                    <ul>
                 @foreach($authors as $author)
                <li class="list-item">
-                    <p class="list-item-name"> 
+                    <p class="list-item-name highlighted-name"> 
                         {{$author->name}} {{$author->surname}} 
                     </p> 
                     <a href="{{route('author.edit', [$author])}}" class="btn">EDIT</a>
