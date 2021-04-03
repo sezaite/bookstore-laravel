@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use Illuminate\Http\Request;
 use App\Models\Author;
+use App\Models\Publisher;
 use Validator;
 
 class BookController extends Controller
@@ -34,7 +35,8 @@ class BookController extends Controller
     public function create()
     {
         $authors = Author::all();
-       return view('book.create', ['authors' => $authors]);
+        $publishers = Publisher::all();
+       return view('book.create', ['authors' => $authors, 'publishers' => $publishers]);
 
     }
 
@@ -75,6 +77,7 @@ class BookController extends Controller
        $book->pages = $request->book_pages;
        $book->about = $request->book_about;
        $book->author_id = $request->author_id;
+       $book->publisher_id = $request->publisher_id;
        $book->save();
        return redirect()->route('book.index')->with('success_message', 'Sėkmingai įrašyta.');
 
@@ -100,7 +103,8 @@ class BookController extends Controller
     public function edit(Book $book)
     {
         $authors = Author::all();
-        return view('book.edit', ['book' => $book, 'authors' => $authors]);
+        $publishers = Publisher::all();
+        return view('book.edit', ['book' => $book, 'authors' => $authors, 'publishers' => $publishers]);
     }
 
     /**
@@ -114,14 +118,18 @@ class BookController extends Controller
     {
         $validator = Validator::make($request->all(),
         [
-            'author_name' => ['required', 'min:3', 'max:64'],
-            'author_surname' => ['required', 'min:3', 'max:64'],
+            'book_title' => ['required'],
+            'book_isbn' => ['required'],
+            'book_pages' => ['required'],
+            'book_about' => ['required', 'min:20', 'max:500'],
         ],
         [
-             'author_surname.min' => 'Surname is too short',
-             'author_surname.max' => 'Surname is too long',
-             'author_name.min' => 'Name is too short',
-             'author_name.max' => 'Name is too long'
+             'book_title.required' => 'Title is required',
+             'book_isbn.required' => 'ISBN is required',
+             'book_pages.required' => 'Pages are required', 
+             'book_about.required' => 'Description is required',
+             'book_about.min' => 'Description is too short',
+             'book_about.max' => 'Description is too long',
         ]
         );
         

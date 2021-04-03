@@ -56,6 +56,8 @@ class AuthorController extends Controller
         [
              'author_surname.min' => 'Surname is too short',
              'author_surname.max' => 'Surname is too long',
+             'author_surname.required' => 'Surname is required',
+             'author_name.required' => 'Name is required',
              'author_name.min' => 'Name is too short',
              'author_name.max' => 'Name is too long'
         ]
@@ -111,6 +113,8 @@ class AuthorController extends Controller
         [
              'author_surname.min' => 'Surname is too short',
              'author_surname.max' => 'Surname is too long',
+             'author_surname.required' => 'Surname is required',
+             'author_name.required' => 'Name is required',
              'author_name.min' => 'Name is too short',
              'author_name.max' => 'Name is too long'
         ]

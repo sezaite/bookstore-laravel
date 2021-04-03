@@ -81,9 +81,22 @@
                                     </a>
                                 </div>
                             </li>
-                            
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Publishers
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item btn" href="{{ route('publisher.index') }}">
+                                        Publishers List
+                                    </a>
+                                        <a class="dropdown-item btn" href="{{ route('publisher.create') }}">
+                                        New Publisher
+                                    </a>
+                                </div>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link logged dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 

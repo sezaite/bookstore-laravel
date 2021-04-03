@@ -69,8 +69,15 @@ nav {
            
             .nav-item.log {
                 border: none;
+                
                 a:hover { 
                 opacity: 0.8;}
+            }
+
+            //martyna sezaite
+            a.nav-link.logged {
+                color: darken($secondary-color, 40%);
+                
             }
 
             .nav-item:hover .dropdown-menu {

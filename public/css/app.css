@@ -104,6 +104,10 @@ nav .nav-wrap ul.navbar-right .nav-item.log a:hover {
   opacity: 0.8;
 }
 
+nav .nav-wrap ul.navbar-right a.nav-link.logged {
+  color: #53514f;
+}
+
 nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu {
   display: block;
 }
@@ -249,6 +253,10 @@ nav .nav-wrap ul.navbar-right .nav-item:hover .dropdown-menu .dropdown-item:firs
 .card-body .form-group.author.filter form button,
 .card-body .form-group.author.filter form a {
   margin: 0;
+}
+
+.card-body.log {
+  padding-top: 10px;
 }
 
 .alert {

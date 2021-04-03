@@ -18,6 +18,8 @@
         color: $accent-color;
     }
 
+    
+
     &-body {
         padding: 0 10px;
 
@@ -127,6 +129,10 @@
             }
         }
         
+    }
+
+    &-body.log {
+        padding-top: 10px;
     }
 
 }

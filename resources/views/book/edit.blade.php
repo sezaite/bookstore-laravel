@@ -36,6 +36,17 @@
                         @endforeach
                 </select>
             </div>
+
+            <div class="form-group author">
+                <label>Publisher:</label>
+            <select name="publisher_id">
+                @foreach ($publishers as $publisher)
+                    <option value="{{$publisher->id}}" @if($publisher->id == $book->publisher_id) selected @endif>
+                        {{$publisher->title}}
+                    </option>
+                @endforeach
+        </select>
+    </div>
                     @csrf
                     <button type="submit" class="btn large-btn">EDIT</button>
                 </form>
