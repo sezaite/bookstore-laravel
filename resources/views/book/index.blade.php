@@ -16,13 +16,13 @@
                      @endforeach
               </select>
                  <button type="submit" class="btn">Filter</button>
-                 <a href="{{route('book.index')}}" class="btn">Clear filter</a>
+                 <a href="{{route('book.index')}}" class="btn clear">Clear</a>
              </div>
          </form>
                 <ul>
                 @foreach ($books as $book)
                 <li class="list-item">
-                <p class="list-item-name"> <span style="font-weight: 600">{{$book->title}}</span> - by {{$book->bookAuthor->name}} {{$book->bookAuthor->surname}} <span style="display: block"><b>Published by: </b>{{$book->bookPublisher->title}}</span></p>
+                <p class="list-item-name"> <span class="highlighted-main-name">{{$book->title}}</span> - written by <span class="highlighted-name">{{$book->bookAuthor->name}} {{$book->bookAuthor->surname}}</span>; <span style="display: block">Published by <span class="highlighted-name">{{$book->bookPublisher->title}}</span>.</p>
                   <a href="{{route('book.edit', [$book])}}" class="btn">EDIT</a>
                   <form method="POST" action="{{route('book.destroy', [$book])}}">
                    @csrf

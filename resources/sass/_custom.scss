@@ -22,3 +22,13 @@ a {
 li {
     list-style: none;
 }
+
+.highlighted-name {
+    color: $accent-color;
+    
+}
+.highlighted-main-name {
+    letter-spacing: 3px;
+    color: $accent-color;
+    font-style: italic;
+}
