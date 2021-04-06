@@ -24,6 +24,7 @@
                 <li class="list-item">
                 <p class="list-item-name"> <span class="highlighted-main-name">{{$book->title}}</span> - written by <span class="highlighted-name">{{$book->bookAuthor->name}} {{$book->bookAuthor->surname}}</span>; <span style="display: block">Published by <span class="highlighted-name">{{$book->bookPublisher->title}}</span>.</p>
                   <a href="{{route('book.edit', [$book])}}" class="btn">EDIT</a>
+                  <a href="{{route('book.pdf', [$book])}}" class="btn">PDF</a>
                   <form method="POST" action="{{route('book.destroy', [$book])}}">
                    @csrf
                    <button type="submit" class="btn">DELETE</button>
